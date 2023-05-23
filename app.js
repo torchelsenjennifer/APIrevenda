@@ -4,6 +4,7 @@ import cors from "cors";
 import routes from "./routes.js";
 import { Carro } from "./models/Carro.js";
 import { Cliente } from "./models/Cliente.js";
+import { Usuario } from "./models/Usuario.js";
 
 const app = express();
 const port = 3000;
@@ -20,7 +21,8 @@ async function conecta_db() {
 	//await sequelize.sync({force:true}); -> recria as tabelas, mesmo se já existirem
 	await Cliente.sync()
 	await Carro.sync();
-	//await Mother.sync()
+	await Usuario.sync()
+
   } catch (erro) {
 	console.log(erro);
     console.error("Erro na conexão com o banco");

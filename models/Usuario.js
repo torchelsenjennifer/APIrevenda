@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../databases/conecta.js";
 
-export const Cliente = sequelize.define("cliente", {
+export const Usuario = sequelize.define("usuario", {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
